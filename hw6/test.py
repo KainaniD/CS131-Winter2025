@@ -7,7 +7,7 @@ import asyncio
 import re
 import json
 
-API_KEY = "AIzaSyBSJIWRC_ZJy-1GeW8nr1f5FJ_UxcggvYQ"
+API_KEY = "YOUR API KEY"
 
 baileyPort = 12006
 bonaPort = 12037
