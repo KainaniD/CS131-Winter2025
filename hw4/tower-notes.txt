@@ -1,0 +1,18 @@
+Here is the ambiguous puzzle that I found, I used the ambiguous function with a logical variable for the C variable in order to find counts that would result in an ambiguous puzzle.
+
+| ?- ambiguous(4, counts([4,2,2,1],[1,2,2,4],[4,2,2,1],[1,2,2,4]),T1,T2).
+
+T1 = [[1,2,3,4],[2,1,4,3],[3,4,1,2],[4,3,2,1]]
+T2 = [[1,2,3,4],[2,4,1,3],[3,1,4,2],[4,3,2,1]] ? ;
+
+T1 = [[1,2,3,4],[2,4,1,3],[3,1,4,2],[4,3,2,1]]
+T2 = [[1,2,3,4],[2,1,4,3],[3,4,1,2],[4,3,2,1]] ? ;
+
+
+
+
+In the case of my test cases, the fd_domain version of ntowers is around 30 times faster than the plain version.
+
+| ?- speedup(Time).
+
+Time = 31.72703412073491

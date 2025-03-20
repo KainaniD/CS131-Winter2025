@@ -1,0 +1,19 @@
+1. I thought about the problem in terms of a set (A) a subset of set (B) if all elements in A are in B. This thinking led me to a helper function "element_in".
+
+2. I thought about this problem in terms of set theory where sets are equal if they are subsets of each other.
+
+3. I simply concatenated the two sets, because duplicates are allowed there is no problem with this.
+
+4. I used an accumulator to store each element that I wanted the union to hold.
+
+5. This is impossible to check for in a program because we would have an infinite amount of recursive calls if the set contains itself because in that case, it needs to contain itself an infinite number of times.
+
+6. Used a helper function to store the previous iteration and check if it is equal to the current iteration.
+
+7. Used a helper function to apply the function "p times", the rest of the code is similar to computed_fixed_point
+
+8. Applied the function to the variable and then added it to the output continually while checking if we still satisfy the condition.
+
+9. I first thought about how I could possibly solve the question. Initially I was thinking of a way to "expand" each rule by replacing it with all the symbols it could become and see if the expansion function would ever end up with all terminal symbols. This solution was too complex and difficult to implement so I eventually started to look for more solutions.
+
+Then I thought that if I were to continuously find the "most obvious" terminal symbols, then I would eventually end up with a stable set of terminal symbols. So I split that up into a lot of subproblems, including defining what is terminal, a helper function to check if a rule is terminal, and another function to add the terminal symbols to a set. Then I altered my functions to work with computed_fixed_point and filtered out all symbols which did not terminate.

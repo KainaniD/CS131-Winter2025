@@ -1,0 +1,5 @@
+
+I decided to write my make_parser function in a very similar style to my make_matcher function. My reasoning was that the parser is just a modified matcher which uses a special kind of acceptor to build the tree. However, in the way that I built my matcher it would be very difficult to simply call my make_matcher function because I used temporary functions which would take the place of the accumulator to accept a given match. I made a function which was similar to my matcher function but had to alter the temporary functions to also build the tree as the grammar and fragment was parsed.
+
+My function falls short on implementation since it will end up in an infinite loop given that there is a blind alley in the rule list before the desired terminal is reached.
+
